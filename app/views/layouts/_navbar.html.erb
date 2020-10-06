@@ -1,0 +1,43 @@
+<nav>
+  <div class="nav-wrapper">
+    <a href="<%= root_path %>" class="brand-logo ml-1">4B's Shop</a>
+
+    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+    <ul class="right hide-on-med-and-down">
+      <li>
+        <%= link_to "#", nil do %>              
+          <i class="left material-icons">insert_chart</i>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to root_path do %>
+          <i class="left material-icons">perm_identity</i> About
+        <% end %>
+      </li>
+      <li>
+        <%= link_to pages_contact_path do %>
+          <i class="left material-icons">place</i> Contact
+        <% end %>
+      </li>
+    </ul>        
+  </div>
+</nav>
+
+<ul class="sidenav" id="mobile-demo">
+  <li>
+    <%= link_to "#", nil do %>              
+      <i class="left material-icons">insert_chart</i>
+    <% end %>
+  </li>
+  <li>
+    <%= link_to root_path do %>
+      <i class="left material-icons">perm_identity</i> About
+    <% end %>
+  </li>
+  <li>
+    <%= link_to pages_contact_path do %>
+      <i class="left material-icons">place</i> Contact
+    <% end %>
+  </li>
+</ul>
