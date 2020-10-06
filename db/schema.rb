@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2020_09_29_155602) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "videos", force: :cascade do |t|
     t.string "wistia"
     t.text "description"

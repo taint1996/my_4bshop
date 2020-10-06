@@ -5,21 +5,30 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: sqlite3
+  adapter: postgresql
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  timeout: 5000
+  host: localhost
+  encoding: UTF-8
+  database: my_4bshop
+  username: my_4bshop 
+  password: 4bshop
 
 development:
   <<: *default
-  database: db/development.sqlite3
-
+  database: my_4bshop_dev
+  username: my_4bshop 
+  password: 4bshop
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: db/test.sqlite3
+  database: my_4bshop_test
+  username: my_4bshop 
+  password: 4bshop
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: my_4bshop_production
+  username: my_4bshop 
+  password: 4bshop
