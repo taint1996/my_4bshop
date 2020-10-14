@@ -6,9 +6,14 @@
 </p>
 
 <p>
+  <strong>Title:</strong>
+  <%= @video.title.present? ? @video.title : "Waiting for update..." %>
+</p>
+
+<p>
   <strong>Description:</strong>
   <%= @video.description %>
 </p>
 
-<%= link_to 'Edit', edit_video_path(@video) %> |
-<%= link_to 'Back', videos_path %>
+<%= link_to 'Edit', edit_video_path(@video), class: "btn waves-effect waves-yellow" %>
+<%= link_to 'Back', videos_path, class: "btn waves-effect waves-default brown lighten-1" %>

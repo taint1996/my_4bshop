@@ -4,7 +4,7 @@ class VideosController < ApplicationController
   # GET /videos
   # GET /videos.json
   def index
-    @videos = Video.all
+    @videos = Video.all.order(created_at: :desc)
   end
 
   # GET /videos/1
@@ -69,6 +69,6 @@ class VideosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def video_params
-      params.require(:video).permit(:wistia, :description)
+      params.require(:video).permit(:wistia, :title, :description)
     end
 end
