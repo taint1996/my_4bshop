@@ -10,6 +10,7 @@ class VideosController < ApplicationController
   # GET /videos/1
   # GET /videos/1.json
   def show
+    @videos = Video.all.order(created_at: :desc)
   end
 
   # GET /videos/new

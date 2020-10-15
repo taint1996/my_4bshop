@@ -2,7 +2,7 @@ require 'test_helper'
 
 class PagesControllerTest < ActionDispatch::IntegrationTest
   test "should get about" do
-    get root_path # should be change about routes
+    get pages_about_url
     assert_response :success
   end
 
